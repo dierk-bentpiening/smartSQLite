@@ -6,7 +6,9 @@ smartSQLite is a small resource-saving SQLite editor with auto-completion, synta
 
 ## Download Pre Release
 
-[GitHub](https://github.com/dierk-bentpiening/smartSQLite/releases/tag/1.0)
+<p align="center">
+[Releases](https://github.com/dierk-bentpiening/smartSQLite/releases/tag/1.0)
+</p>
 
 ## Description
 
