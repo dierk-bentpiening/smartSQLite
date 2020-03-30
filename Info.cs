@@ -41,5 +41,24 @@ namespace Smart_SQLite
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("https://icons8.de");
+            }
+            catch { }
+            }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("https://github.com/dierk-bentpiening/smartSQLite");
+            }
+            catch { }
+            }
     }
 }

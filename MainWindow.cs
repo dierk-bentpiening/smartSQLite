@@ -13,9 +13,9 @@ using System.Windows.Forms;
 namespace Smart_SQLite
 {
 
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
            
@@ -631,6 +631,82 @@ namespace Smart_SQLite
                 txtOutput.AppendText(ex + "\n");
             }
         }
+
+        private void consoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Debug.AllocConsole();
+            Thread startInterpreter = new Thread(Interpreter.startInterpreter);
+            startInterpreter.Start();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Database (*.db; .sqlite3)|*.db; *.sqlite3";
+                sfd.FileName = "Output.csv";
+                bool fileError = false;
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    SQLiteConnection.CreateFile(sfd.FileName);
+                    openCreatedDB(sfd.FileName);
+                }
+              
+                
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void openCreatedDB(string vPath)
+        {
+            try {
+                globals.dbOpened = true;
+                globals.vFileName = vPath;
+                SQLiteConnection connection = new SQLiteConnection("Data Source=" + vPath);
+                tts.Text = "Loaded Database " + vPath;
+                txtOutput.Text = "Loaded Database " + vPath + "\n";
+
+                connection.Open();
+                SQLiteCommand cmd = new SQLiteCommand("select * from sqlite_master", connection);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                TableNames.Items.Clear();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        string name = reader.GetString(reader.GetOrdinal("name"));
+                        TableNames.Items.Add(name);
+                        acM.AddItem(name);
+                    }
+                }
+                SQLiteConnection connectioner = new SQLiteConnection("Data Source=" + vPath);
+                connectioner.Open();
+                SQLiteDataAdapter dataadapterSQ = new SQLiteDataAdapter("select * from sqlite_sequence", connectioner);
+                DataSet dSET = new System.Data.DataSet();
+                dataadapterSQ.Fill(dSET, "SQ");
+                sqV.ClearSelection();
+                sqV.DataSource = dSET.Tables[0];
+
+                sqV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                sqV.AutoResizeColumns();
+
+                //sqV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                //sqV.AutoResizeRows();
+                txtLA.Text = "Opened: " + globals.vFileName + " Date/Time: " + DateTime.Now.ToString() + "\n";
+            }
+            catch(Exception ex)
+            {
+                txtOutput.AppendText(ex.Message.ToString() + "\n");
+            }
+    }
+    
+    
     }
 
     public class globals
