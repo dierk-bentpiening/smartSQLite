@@ -31,8 +31,9 @@ Print.
 
 We continue to extend the functions and possibilities of the smartSQLite editor.
  
-Software Programmed with ❤️ in Germany.
-We ❤️ open source!
+## Software Programmed with ❤️ in Germany.
+
+## We ❤️ open source!
 
 ## Screenshots
 
