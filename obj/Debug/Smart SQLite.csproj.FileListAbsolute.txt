@@ -40,7 +40,6 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\D
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\ScintillaNET.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\System.Data.SQLite.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\System.Data.SQLite.dll.config
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.csprojAssemblyReference.cache
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart_SQLite.Info.resources
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart_SQLite.Properties.Resources.resources
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.csproj.GenerateResource.cache
@@ -48,3 +47,8 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\D
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart_SQLite.MainWindow.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.TrustInfo.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.exe.manifest
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.application

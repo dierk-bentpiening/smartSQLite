@@ -260,7 +260,7 @@ namespace Smart_SQLite
             int iSelStart = txtSQLSchema.SelectionStart;
             int iSelLength = txtSQLSchema.SelectionLength;
 
-            string tokens = "(auto|double|int|struct|break|else|long|switch|case|enum|register|typedef|char|extern|return|union|const|float|short|unsigned|continue|for|signed|void|default|goto|sizeof|volatile|do|if|static|while|order|by|desc|asc|select|where|like|upper|from|CREATE|NUMERIC|NOT|NULL|TEXT|PRIMARY|KEY|AUTOINCREMENT|INTEGER|CREATE|TABLE|create|table)";
+            string tokens = "(for|signed|void|default|goto|sizeof|volatile|do|if|static|while|order|by|desc|asc|select|where|like|upper|from|CREATE|NUMERIC|NOT|NULL|TEXT|PRIMARY|KEY|AUTOINCREMENT|INTEGER|CREATE|TABLE|create|table|SELECT|BY|ORDER)";
 
             Regex rex = new Regex(tokens);
 
@@ -320,7 +320,7 @@ namespace Smart_SQLite
         {
             if (globals.lastsql != null)
             {
-                string sqlCMD = globals.lastsql + " order by ID ASC";
+                string sqlCMD = globals.lastsql + " order by ROWID ASC";
                 dataFill(sqlCMD);
                 txtOutput.AppendText("Sorted ascending: " + sqlCMD + "\n");
             }
@@ -334,7 +334,7 @@ namespace Smart_SQLite
         {
             if (globals.lastsql != null)
             {
-                string sqlCMD = globals.lastsql + " order by ID DESC";
+                string sqlCMD = globals.lastsql + " order by ROWID DESC";
                 dataFill(sqlCMD);
                 txtOutput.AppendText("Sorted descending: " + sqlCMD + "\n");
 
