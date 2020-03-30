@@ -1,4 +1,6 @@
-# smartSQLite
+<p align="center">
+  <img src="https://i.ibb.co/ZxfHFD1/blam.png">
+</p>
  
 smartSQLite is a small resource-saving SQLite editor with auto-completion, syntax highlighting and much more.
 
