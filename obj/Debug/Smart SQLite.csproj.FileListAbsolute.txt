@@ -1,0 +1,25 @@
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\Smart SQLite.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\Smart SQLite.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\Smart SQLite.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\EntityFramework.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\System.Data.SQLite.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\EntityFramework.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\System.Data.SQLite.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart SQLite.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart_SQLite.Form1.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart_SQLite.Properties.Resources.resources
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart SQLite.csproj.GenerateResource.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart SQLite.csproj.CopyComplete
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart SQLite.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart SQLite.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\AutocompleteMenu-ScintillaNET.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\ScintillaNET.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\ScintillaNET.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\itextsharp.dll
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\itextsharp.xml
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart_SQLite.Info.resources
