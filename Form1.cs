@@ -92,6 +92,7 @@ namespace Smart_SQLite
         {
             try
             {
+
                 Console.WriteLine(vSQL);
                 Console.WriteLine(globals.vFileName);
                 SQLiteConnection connection = new SQLiteConnection("Data Source=" + globals.vFileName.ToString());
@@ -105,8 +106,17 @@ namespace Smart_SQLite
                 dvGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dvGV.AutoResizeRows();
                 dvGV.AutoResizeColumns();
+                stsLBL2.Text = "Loaded " + ds.Tables[0].Columns.Count.ToString() + " columns with " + ds.Tables[0].Rows.Count.ToString() + " rows"; ;
+                var cmd = new SQLiteCommand(vSQL, connection);
+                var dr = cmd.ExecuteReader();
+                for (var i = 0; i < dr.FieldCount; i++)
+                {
+                    acM.AddItem(dr.GetName(i));
+                }
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 txtOutput.AppendText("Error: " + ex.ToString() + "\n");
             }
@@ -167,17 +177,19 @@ namespace Smart_SQLite
                         insertSQL.ExecuteNonQuery();
                         connection.Close();
                         txtOutput.AppendText("Written SQL insert command: " + txtSQL.Text);
-                        txtSQL.Clear();
+                        
                         rbtnInsertMode.Checked = false;
                         dataFill(globals.lastsql);
                         txtLA.AppendText(txtSQL.Text + "\n");
+                        rbtnInsertMode.Checked = false;
 
                     }
                     else
                     {
                         txtOutput.AppendText("Changes not written, SQL insert canceled!\n");
-                        txtSQL.Clear();
+                        
                         rbtnInsertMode.Checked = false;
+                        
                     }
 
 
@@ -187,7 +199,7 @@ namespace Smart_SQLite
                 {
                     dataFill(txtSQL.Text);
                     globals.lastsql = txtSQL.Text;
-                    txtSQL.Clear();
+                    rbtnInsertMode.Checked = false;
                     txtLA.AppendText(txtSQL.Text + "\n");
 
                 }
@@ -348,13 +360,6 @@ namespace Smart_SQLite
             }
         }
 
-        private void rbtnInsertMode_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbtnInsertMode.Checked = true)
-            {
-                globals.insertmode = true;
-            }
-        }
 
         private void sortToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -529,6 +534,102 @@ namespace Smart_SQLite
         {
             Info infoW = new Info();
             infoW.Show();
+        }
+
+        private void cmb1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmb1.SelectedIndex == 0)
+            {
+                txtSQL.Text = "SELECT <yourchoice> FROM <tablename>";
+            }
+            else if(cmb1.SelectedIndex == 1)
+            {
+                txtSQL.Text = "INSERT INTO <tablename> (column1,c column2) VALUES (value1, value2)";
+            }
+            else if(cmb1.SelectedIndex == 2)
+            {
+                txtSQL.Text = "SELECT column1, column2 FROM <tablename2>  INNER JOIN <joiname> ON tb1.Col = tb2.Col ";
+            }
+            else if(cmb1.SelectedIndex == 3)
+            {
+                txtSQL.Text = "SELECT <yourchoice> FROM <tablename> ORDER BY ID ASC";
+
+            }
+        }
+
+        private void performanceCounterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+    
+
+        private void clearSQLEditorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtSQL.Clear();
+
+        }
+
+        private void clearOUTPUTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtOutput.Clear();
+        }
+
+        private void rbtnInsertMode_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (rbtnInsertMode.Checked == true)
+            {
+                globals.insertmode = true;
+            }
+            else
+            {
+                globals.insertmode = false;
+            }
+        }
+
+
+      
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap bm = new Bitmap(this.dvGV.Width, this.dvGV.Height);
+            dvGV.DrawToBitmap(bm, new System.Drawing.Rectangle(0, 0, this.dvGV.Width, this.dvGV.Height));
+            e.Graphics.DrawImage(bm, 0, 0);
+        }
+
+        private void loadSQLiteScriptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "SQLite Script (*.sqlcmd)|*.sqlcmd; *.sh; *.txt";
+
+
+                bool fileError = false;
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string[] lines = File.ReadAllLines(ofd.FileName);
+                    foreach (string line in lines)
+                    {
+                        txtSQL.AppendText(line);
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            catch(Exception ex)
+            {
+                txtOutput.AppendText(ex + "\n");
+            }
         }
     }
 
