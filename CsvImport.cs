@@ -18,7 +18,7 @@ namespace Smart_SQLite
             db_comm.CommandText = $"CREATE TABLE {tablename} ([{string.Join("] TEXT, [", columnnames)}] TEXT)";
             db_comm.ExecuteNonQuery();
             
-            foreach (var line in lines)
+            foreach (var line in lines.Skip(1))
             {
                 var linesplit = line.Split(splitchars);
                 db_comm.CommandText = $"INSERT INTO {tablename} VALUES ({string.Join(",", linesplit)})";
