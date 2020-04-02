@@ -20,7 +20,8 @@ namespace Smart_SQLite
             
             foreach (var line in lines)
             {
-                db_comm.CommandText = $"INSERT INTO {tablename} VALUES ({string.Join(",", line)})";
+                var linesplit = line.Split(splitchars);
+                db_comm.CommandText = $"INSERT INTO {tablename} VALUES ({string.Join(",", linesplit)})";
                 db_comm.ExecuteNonQuery();
             }
 
