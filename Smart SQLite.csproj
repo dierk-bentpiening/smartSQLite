@@ -111,6 +111,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CsvImport.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="DataClasses\globals.cs" />
     <Compile Include="Interpreter.cs" />
