@@ -23,9 +23,6 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\itextsharp.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\bin\Debug\itextsharp.xml
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\ShareX Main Server\COVID-19-TELEGRAM-INFORMATION-BOT\SmartSQLiteBrowser\Smart SQLite\obj\Debug\Smart_SQLite.Info.resources
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.exe.config
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.exe
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\AutocompleteMenu-ScintillaNET.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\EntityFramework.dll
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\EntityFramework.SqlServer.dll
@@ -44,11 +41,11 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\D
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart_SQLite.Properties.Resources.resources
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.csproj.GenerateResource.cache
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.csproj.CopyComplete
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.exe
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart_SQLite.MainWindow.resources
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite.application
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.TrustInfo.xml
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.exe.manifest
-C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.application
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite Editor.exe.config
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite Editor.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\Smart SQLite Editor.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite Editor.exe
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Debug\Smart SQLite Editor.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Debug\ressources\icons\IconTableListView.png

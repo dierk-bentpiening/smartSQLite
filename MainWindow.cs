@@ -59,11 +59,16 @@ namespace Smart_SQLite
                     TableNames.Items.Clear();
                     if (reader.HasRows)
                     {
+                        var imageList = new ImageList();
+                        System.Drawing.Image tableIcon = System.Drawing.Image.FromFile(@"ressources/icons/IconTableListView.png");
+                        imageList.Images.Add("item", tableIcon);
+                        TableNames.LargeImageList = imageList;
                         while (reader.Read())
                         {
                             
                             string name = reader.GetString(reader.GetOrdinal("name"));
-                            TableNames.Items.Add(name);
+                            var tableN = TableNames.Items.Add(name);
+                            tableN.ImageKey = "item";
                             acM.AddItem(name);
                         }
                     }
@@ -102,13 +107,16 @@ namespace Smart_SQLite
                 dataadapter.Fill(ds, "DV");
                 dvGV.ClearSelection();
                 dvGV.DataSource = ds.Tables[0];
-                dvGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-                dvGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dvGV.AutoResizeRows();
-                dvGV.AutoResizeColumns();
+                //dvGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                //dvGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //dvGV.AutoResizeRows();
+                //dvGV.AutoResizeColumns();
                 stsLBL2.Text = "Loaded " + ds.Tables[0].Columns.Count.ToString() + " columns with " + ds.Tables[0].Rows.Count.ToString() + " rows"; ;
                 var cmd = new SQLiteCommand(vSQL, connection);
                 var dr = cmd.ExecuteReader();
+              
+            
+
                 for (var i = 0; i < dr.FieldCount; i++)
                 {
                     acM.AddItem(dr.GetName(i));
@@ -123,6 +131,34 @@ namespace Smart_SQLite
             
         }
 
+
+        public void dataFillForTab(String vSQL, DataGridView DataGrid)
+        {
+            try
+            {
+               
+                Console.WriteLine(vSQL);
+                Console.WriteLine(globals.vFileName);
+                SQLiteConnection connection = new SQLiteConnection("Data Source=" + globals.vFileName.ToString());
+                connection.Open();
+                SQLiteDataAdapter dataadapter = new SQLiteDataAdapter(vSQL, connection);
+                DataSet ds = new System.Data.DataSet();
+                dataadapter.Fill(ds, "DS");
+                DataGrid.ClearSelection();
+                DataGrid.DataSource = ds.Tables[0];
+                //dvGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+                //dvGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                //dvGV.AutoResizeRows();
+                //dvGV.AutoResizeColumns();
+  
+
+            }
+            catch (Exception ex)
+            {
+                txtOutput.AppendText("Error: " + ex.ToString() + "\n");
+            }
+
+        }
         private void txtSQL_TextChanged(object sender, EventArgs e)
         {
             if (globals.dbOpened == true)
@@ -215,12 +251,24 @@ namespace Smart_SQLite
 
         }
 
-        private void TableNames_SelectedIndexChanged(object sender, EventArgs e)
+        public void TableNames_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 String sql = "select * from " + TableNames.SelectedItems[0].Text;
-
+                
+                string title = TableNames.SelectedItems[0].Text;
+                TabPage myTabPage = new TabPage(title);
+                myTabPage.Name = TableNames.SelectedItems[0].Text;
+                DataGridView data = new DataGridView();
+                data.Name = TableNames.SelectedItems[0].Text;
+                data.Anchor = AnchorStyles.Bottom | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left;
+                myTabPage.Controls.Add(data);
+                dataFillForTab(sql, data);
+                Console.WriteLine(data.Name);
+               
+                tblCon.TabPages.Add(myTabPage);
+                
                 txtOutput.AppendText(sql + "\n");
                 dataFill(sql);
                 sqlTableSchema(TableNames.SelectedItems[0].Text);
@@ -316,34 +364,8 @@ namespace Smart_SQLite
 
         }
 
-        private void ascendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (globals.lastsql != null)
-            {
-                string sqlCMD = globals.lastsql + " order by ROWID ASC";
-                dataFill(sqlCMD);
-                txtOutput.AppendText("Sorted ascending: " + sqlCMD + "\n");
-            }
-            else
-            {
-                txtOutput.AppendText("You cant sort. No Table loaded\n");
-            }
-        }
+   
 
-        private void descendingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (globals.lastsql != null)
-            {
-                string sqlCMD = globals.lastsql + " order by ROWID DESC";
-                dataFill(sqlCMD);
-                txtOutput.AppendText("Sorted descending: " + sqlCMD + "\n");
-
-            }
-            else
-            {
-                txtOutput.AppendText("You cant sort. No Table loaded\n");
-            }
-        }
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -594,6 +616,7 @@ namespace Smart_SQLite
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             printDocument1.Print();
         }
 
@@ -709,12 +732,5 @@ namespace Smart_SQLite
     
     }
 
-    public class globals
-    {
-        public static string vFileName = "";
-        public static bool dbOpened = false;
-        public static string sqlschema = "";
-        public static string lastsql;
-        public static bool insertmode = false;
-    }
+
 }

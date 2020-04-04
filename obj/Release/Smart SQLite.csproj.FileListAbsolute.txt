@@ -22,3 +22,5 @@ C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\R
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Release\Smart SQLite Editor.pdb
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Release\Smart SQLite Editor.exe
 C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Release\Smart SQLite Editor.pdb
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\obj\Release\Smart SQLite.csprojAssemblyReference.cache
+C:\Users\hackbeardmull\OneDrive\Code\ShareX\SmartSQLiteBrowser\smartSQLite\bin\Release\ressources\icons\IconTableListView.png

@@ -29,17 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.datenbankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ascendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.descendingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +52,7 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tblCon = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.DataView = new System.Windows.Forms.TabPage();
             this.dvGV = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,27 +74,27 @@
             this.acM = new AutocompleteMenuNS.AutocompleteMenu();
             this.cmb1 = new System.Windows.Forms.ComboBox();
             this.rbtnInsertMode = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.menuStrip1.SuspendLayout();
             this.tblCon.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.DataView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvGV)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sqV)).BeginInit();
             this.ssStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.datenbankToolStripMenuItem,
             this.reloadToolStripMenuItem,
-            this.sortToolStripMenuItem,
             this.exportToolStripMenuItem,
             this.printToolStripMenuItem,
             this.editToolStripMenuItem,
@@ -109,7 +106,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(1344, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,37 +146,6 @@
             this.reloadToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.reloadToolStripMenuItem.Text = "Reload";
             this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
-            // 
-            // sortToolStripMenuItem
-            // 
-            this.sortToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ascendingToolStripMenuItem,
-            this.descendingToolStripMenuItem});
-            this.sortToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sortToolStripMenuItem.Image")));
-            this.sortToolStripMenuItem.Name = "sortToolStripMenuItem";
-            this.sortToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.sortToolStripMenuItem.Text = "Sort";
-            this.sortToolStripMenuItem.Click += new System.EventHandler(this.sortToolStripMenuItem_Click);
-            // 
-            // ascendingToolStripMenuItem
-            // 
-            this.ascendingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ascendingToolStripMenuItem.Image")));
-            this.ascendingToolStripMenuItem.Name = "ascendingToolStripMenuItem";
-            this.ascendingToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.ascendingToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.ascendingToolStripMenuItem.Text = "Ascending";
-            this.ascendingToolStripMenuItem.Click += new System.EventHandler(this.ascendingToolStripMenuItem_Click);
-            // 
-            // descendingToolStripMenuItem
-            // 
-            this.descendingToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("descendingToolStripMenuItem.Image")));
-            this.descendingToolStripMenuItem.Name = "descendingToolStripMenuItem";
-            this.descendingToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.descendingToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
-            this.descendingToolStripMenuItem.Text = "Descending";
-            this.descendingToolStripMenuItem.Click += new System.EventHandler(this.descendingToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -301,7 +267,10 @@
             // 
             // tblCon
             // 
-            this.tblCon.Controls.Add(this.tabPage1);
+            this.tblCon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblCon.Controls.Add(this.DataView);
             this.tblCon.Controls.Add(this.tabPage2);
             this.tblCon.ItemSize = new System.Drawing.Size(400, 15);
             this.tblCon.Location = new System.Drawing.Point(0, 27);
@@ -311,29 +280,32 @@
             this.tblCon.Size = new System.Drawing.Size(1203, 598);
             this.tblCon.TabIndex = 1;
             // 
-            // tabPage1
+            // DataView
             // 
-            this.tabPage1.Controls.Add(this.dvGV);
-            this.tabPage1.Location = new System.Drawing.Point(4, 19);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1195, 575);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Data View";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.DataView.Controls.Add(this.dvGV);
+            this.DataView.Location = new System.Drawing.Point(4, 19);
+            this.DataView.Name = "DataView";
+            this.DataView.Padding = new System.Windows.Forms.Padding(3);
+            this.DataView.Size = new System.Drawing.Size(1195, 575);
+            this.DataView.TabIndex = 0;
+            this.DataView.Text = "Data View";
+            this.DataView.UseVisualStyleBackColor = true;
             // 
             // dvGV
             // 
+            this.dvGV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvGV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvGV.DefaultCellStyle = dataGridViewCellStyle10;
             this.dvGV.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dvGV.Location = new System.Drawing.Point(0, -1);
             this.dvGV.Name = "dvGV";
@@ -399,24 +371,24 @@
             // 
             // sqV
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.sqV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            this.sqV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.sqV.BackgroundColor = System.Drawing.Color.DimGray;
             this.sqV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sqV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.sqV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.sqV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.sqV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.sqV.DefaultCellStyle = dataGridViewCellStyle12;
             this.sqV.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.sqV.Location = new System.Drawing.Point(451, 25);
             this.sqV.Name = "sqV";
@@ -456,7 +428,8 @@
             // txtSQL
             // 
             this.txtSQL.AcceptsTab = true;
-            this.txtSQL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSQL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.acM.SetAutocompleteMenu(this.txtSQL, this.acM);
             this.txtSQL.BackColor = System.Drawing.Color.BurlyWood;
             this.txtSQL.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -470,14 +443,17 @@
             // 
             // ssStatus
             // 
+            this.ssStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ssStatus.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ssStatus.Dock = System.Windows.Forms.DockStyle.None;
             this.ssStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tts,
             this.stsLBL2});
             this.ssStatus.Location = new System.Drawing.Point(0, 750);
             this.ssStatus.Name = "ssStatus";
             this.ssStatus.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.ssStatus.Size = new System.Drawing.Size(1344, 22);
+            this.ssStatus.Size = new System.Drawing.Size(17, 22);
             this.ssStatus.TabIndex = 4;
             this.ssStatus.Text = "statusStrip1";
             // 
@@ -493,6 +469,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 633);
             this.label1.Name = "label1";
@@ -502,6 +480,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(628, 635);
             this.label2.Name = "label2";
@@ -516,12 +496,13 @@
             // 
             // TableNames
             // 
-            this.TableNames.AutoArrange = false;
-            this.TableNames.BackColor = System.Drawing.Color.LightSlateGray;
+            this.TableNames.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid;
+            this.TableNames.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TableNames.BackColor = System.Drawing.Color.Gainsboro;
             this.TableNames.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TableNames.CheckBoxes = true;
-            this.TableNames.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TableNames.ForeColor = System.Drawing.Color.MintCream;
+            this.TableNames.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TableNames.ForeColor = System.Drawing.Color.Black;
             this.TableNames.FullRowSelect = true;
             this.TableNames.GridLines = true;
             this.TableNames.HideSelection = false;
@@ -613,6 +594,7 @@
             // 
             // cmb1
             // 
+            this.cmb1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cmb1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmb1.FormattingEnabled = true;
@@ -630,8 +612,10 @@
             // 
             // rbtnInsertMode
             // 
+            this.rbtnInsertMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rbtnInsertMode.AutoSize = true;
-            this.rbtnInsertMode.Location = new System.Drawing.Point(1123, 628);
+            this.rbtnInsertMode.Location = new System.Drawing.Point(1121, 631);
             this.rbtnInsertMode.Name = "rbtnInsertMode";
             this.rbtnInsertMode.Size = new System.Drawing.Size(82, 17);
             this.rbtnInsertMode.TabIndex = 9;
@@ -639,27 +623,17 @@
             this.rbtnInsertMode.UseVisualStyleBackColor = true;
             this.rbtnInsertMode.CheckedChanged += new System.EventHandler(this.rbtnInsertMode_CheckedChanged_1);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1324, 750);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1344, 772);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rbtnInsertMode);
             this.Controls.Add(this.cmb1);
             this.Controls.Add(this.label3);
@@ -671,18 +645,16 @@
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.tblCon);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
             this.Name = "MainWindow";
             this.Text = "Smart SQLite Editor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tblCon.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.DataView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvGV)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -690,7 +662,6 @@
             this.ssStatus.ResumeLayout(false);
             this.ssStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,7 +674,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.TabControl tblCon;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage DataView;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RichTextBox txtOutput;
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
@@ -717,16 +688,12 @@
         private System.Windows.Forms.ToolStripMenuItem itemExecute;
         private System.Windows.Forms.ToolStripStatusLabel tts;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.ListView TableNames;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.RichTextBox txtSQLSchema;
         private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.DataGridView sqV;
         public System.Windows.Forms.DataGridView dvGV;
-        private System.Windows.Forms.ToolStripMenuItem sortToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ascendingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem descendingToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -742,9 +709,9 @@
         private System.Windows.Forms.CheckBox rbtnInsertMode;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consoleToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.ToolStripMenuItem loadSQLiteScriptToolStripMenuItem;
+        public System.Windows.Forms.ListView TableNames;
     }
 }
 
